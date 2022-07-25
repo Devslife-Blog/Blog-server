@@ -9,6 +9,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String(25))
+    fullname = Column(String(40))
     email = Column(String(30))
     password = Column(String(130))
     profile_image = Column(Integer, ForeignKey("images.id"))
