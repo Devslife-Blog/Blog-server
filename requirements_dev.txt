@@ -1,5 +1,6 @@
 fastapi
 flake8
+isort
 jedi
 mysqlclient
 sqlalchemy
