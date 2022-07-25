@@ -1,0 +1,10 @@
+from pydantic import BaseSettings
+
+
+class Settings(BaseSettings):
+    sqlalchemy_url = "{DATABASE}://{USERNAME}:{PASSWORD}@{HOST}/{NAME}"
+
+    class Config:
+        env_file = "{ENV_FILE}"
+
+settings = Settings()

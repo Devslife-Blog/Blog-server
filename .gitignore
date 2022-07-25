@@ -1,2 +1,4 @@
+blog/settings.py
+.vim
 venv
 **/__pycache__

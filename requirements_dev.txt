@@ -1,0 +1,6 @@
+fastapi
+flake8
+jedi
+mysqlclient
+sqlalchemy
+uvicorn
