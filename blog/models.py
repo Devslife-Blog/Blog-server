@@ -25,6 +25,7 @@ class Blog(Base):
     description = Column(String(120), nullable=True)
     date = Column(Date)
     content = Column(String(2400))
+    writer_id = Column(Integer, ForeignKey("users.id"))
 
     writer = relationship("User", back_populates="blogs")
 

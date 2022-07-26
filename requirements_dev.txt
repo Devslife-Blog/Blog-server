@@ -2,6 +2,10 @@ fastapi
 flake8
 isort
 jedi
+jedi-language-server
 mysqlclient
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
 sqlalchemy
 uvicorn

@@ -33,3 +33,15 @@ class UserCreate(UserBase):
 class User(UserCreate):
     id: int
     blogs: List[Blog] = []
+
+    class Config:
+        orm_mode = True
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenPayload(BaseModel):
+    sub: str

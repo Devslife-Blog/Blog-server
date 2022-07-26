@@ -3,6 +3,8 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     sqlalchemy_url = "{DATABASE}://{USERNAME}:{PASSWORD}@{HOST}/{NAME}"
+    secret_key = "{SECRET_KEY}"
+    login_url = "{LOGIN_URL}" # "/login" for example
 
     class Config:
         env_file = "{ENV_FILE}"
