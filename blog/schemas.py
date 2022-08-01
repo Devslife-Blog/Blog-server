@@ -24,7 +24,7 @@ class UserBase(BaseModel):
 
 
 class UserCreate(UserBase):
-    fullanme: str
+    fullname: str
     email: str
     password: str
     profile_image: str | None = None
@@ -45,3 +45,24 @@ class Token(BaseModel):
 
 class TokenPayload(BaseModel):
     sub: str
+
+
+class SignupRequestBase(BaseModel):
+    username: str
+    fullname: str
+    email: str
+    detail: str
+    request_at: date
+
+
+class SignupRequestCreate(SignupRequestBase):
+    password: str
+
+
+class SignupRequest(SignupRequestCreate):
+    id: int
+
+
+class AnswerSignupRequest(BaseModel):
+    request_id: int
+    answer: bool = False

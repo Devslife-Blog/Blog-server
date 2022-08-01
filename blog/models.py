@@ -35,3 +35,15 @@ class Image(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     filename = Column(String(50))
+
+
+class SignupRequest(Base):
+    __tablename__ = "signup_requests"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String(25))
+    fullname = Column(String(40))
+    email = Column(String(30))
+    password = Column(String(130))
+    detail = Column(String(150))
+    request_at = Column(Date)

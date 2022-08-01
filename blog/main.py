@@ -4,8 +4,10 @@ from sqlalchemy.orm import Session
 
 from .settings import settings
 from . import crud, database, deps, security
+from .routes.user import router
 
 app = FastAPI(name="Devslife Blog", version="1.0")
+app.include_router(router, prefix="/user")
 
 
 @app.on_event('startup')
